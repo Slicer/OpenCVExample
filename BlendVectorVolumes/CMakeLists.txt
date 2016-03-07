@@ -1,6 +1,6 @@
 
 #-----------------------------------------------------------------------------
-set(MODULE_NAME BlendScalarVolume)
+set(MODULE_NAME BlendVectorVolumes)
 
 #-----------------------------------------------------------------------------
 
@@ -27,15 +27,16 @@ find_package(OpenCV 3.1 REQUIRED)
 message(STATUS "Blend: OpenCV dir = ${OpenCV_DIR}")
 get_filename_component(OpenCV_INCLUDE_DIR ${OpenCV_DIR}/../../include ABSOLUTE)
 message(STATUS "Blend: OpenCV include dir = ${OpenCV_INCLUDE_DIR}")
+
 set(MODULE_INCLUDE_DIRECTORIES
   ${OpenCV_INCLUDE_DIR}
   )
 
 set(MODULE_SRCS
-  BlendScalarVolume.cxx
+  BlendVectorVolumes.cxx
   )
 
-message(STATUS "BlendScalarVolumes: OpenCV Libs = ${OpenCV_LIBS}")
+message(STATUS "BlendVectorVolumes: OpenCV Libs = ${OpenCV_LIBS}")
 set(MODULE_TARGET_LIBRARIES
   ${ITK_LIBRARIES}
   ${OpenCV_LIBS}

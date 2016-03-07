@@ -16,7 +16,7 @@ set(testname ${CLP}Test)
 ExternalData_add_test(${CLP}Data NAME ${testname} COMMAND ${SEM_LAUNCH_COMMAND} $<TARGET_FILE:${CLP}Test>
  --compare ${BASELINE}/${CLP}Test.png ${TEMP}/${CLP}Test.png
  ModuleEntryPoint
- --alpha 0.66 ${INPUT}/blendScalarInput1.png ${INPUT}/blendScalarInput2.png ${TEMP}/${CLP}Test.png
+ --alpha 0.66 ${INPUT}/blendVectorInput1.png ${INPUT}/blendVectorInput2.png ${TEMP}/${CLP}Test.png
   )
 set_property(TEST ${testname} PROPERTY LABELS ${CLP})
 

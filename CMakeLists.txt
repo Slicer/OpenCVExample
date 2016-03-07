@@ -21,7 +21,7 @@ find_package(SlicerOpenCV REQUIRED)
 
 #-----------------------------------------------------------------------------
 # Extension modules
-add_subdirectory(BlendScalarVolume)
+add_subdirectory(BlendVectorVolumes)
 ## NEXT_MODULE
 
 #-----------------------------------------------------------------------------

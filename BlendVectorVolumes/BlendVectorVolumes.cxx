@@ -1,4 +1,4 @@
-#include "BlendScalarVolumeCLP.h"
+#include "BlendVectorVolumesCLP.h"
 
 #include <opencv2/opencv.hpp>
 
