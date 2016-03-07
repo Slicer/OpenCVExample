@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Filtering.Arithmetic</category>
+  <title>Blend Scalar Volume</title>
+  <description><![CDATA[This is a CLI module that depends on the SlicerOpenCV extension.]]></description>
+  <version>0.0.1</version>
+  <documentation-url>http://slicer.org/slicerWiki/index.php/Documentation/Nightly/Extensions/BlendScalarVolume</documentation-url>
+  <license>Slicer</license>
+  <contributor>Nicole Aucoin (BWH)</contributor>
+  <acknowledgements>This work was supported by a supplement to the Quantitative Image Informatics project via the NIH-National Cancer Institute Grant U24 CA180918-03 as well as U24 CA180924 Tools to Analyze Morphology and Spatially Mapped Molecular Data with Stony Brook University.</acknowledgements>
+  <parameters>
+    <label>IO</label>
+    <description><![CDATA[Input/output parameters]]></description>
+    <double>
+      <name>alpha</name>
+      <longflag>alpha</longflag>
+      <flag>a</flag>
+      <label>Alpha</label>
+      <description><![CDATA[A double value between 0.0 and 1.0 that gives the weight of the first input image in the resulting blend.]]></description>
+      <default>0.5</default>
+      <constraints>
+        <minimum>0.0</minimum>
+        <maximum>1.0</maximum>
+        <step>0.01</step>
+      </constraints>
+    </double>
+    <double>
+      <name>gamma</name>
+      <longflag>gamma</longflag>
+      <flag>g</flag>
+      <label>Gamma</label>
+      <description><![CDATA[A double value that is added to the weighted blend, used to increase or decrease intensity.]]></description>
+      <default>0.0</default>
+    </double>
+    <image type="vector" fileExtensions=".png">
+      <name>inputVolume1</name>
+      <label>First Input Volume</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description><![CDATA[First input vector volume]]></description>
+    </image>
+    <image type="vector" fileExtensions=".png">
+      <name>inputVolume2</name>
+      <label>Second Input Volume</label>
+      <channel>input</channel>
+      <index>1</index>
+      <description><![CDATA[Second input vector volume]]></description>
+    </image>
+    <image type="vector" fileExtensions=".png">
+      <name>outputVolume</name>
+      <label>Output Volume</label>
+      <channel>output</channel>
+      <index>2</index>
+      <description><![CDATA[Output vector volume]]></description>
+    </image>
+  </parameters>
+</executable>
