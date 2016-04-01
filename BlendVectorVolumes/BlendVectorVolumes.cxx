@@ -41,8 +41,16 @@ int main( int argc, char * argv[] )
     return EXIT_FAILURE;
     }
 
-  // do the blending
-  cv::addWeighted(source1, alpha, source2, beta, gamma, destination);
+  try
+    {
+    // do the blending
+    cv::addWeighted(source1, alpha, source2, beta, gamma, destination);
+    }
+  catch (const cv::Exception& e)
+    {
+    std::cerr << "Error in addWeighted:\n\t" << e.what() << std::endl;
+    return EXIT_FAILURE;
+    }
 
   if (!destination.data)
     {
