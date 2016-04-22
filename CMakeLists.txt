@@ -8,7 +8,7 @@ set(EXTENSION_HOMEPAGE "http://slicer.org/slicerWiki/index.php/Documentation/Nig
 set(EXTENSION_CATEGORY "Examples")
 set(EXTENSION_CONTRIBUTORS "Nicole Aucoin (BWH)")
 set(EXTENSION_DESCRIPTION "This is an example of an extension that depends on the SlicerOpenCV extension")
-set(EXTENSION_ICONURL "https://raw.githubusercontent.com/naucoin/OpenCVExample/master/OpenCVExample.png")
+set(EXTENSION_ICONURL "https://raw.githubusercontent.com/SBU-BMI/OpenCVExample/master/OpenCVExample.png")
 set(EXTENSION_SCREENSHOTURLS "")
 set(EXTENSION_DEPENDS "SlicerOpenCV")
 
