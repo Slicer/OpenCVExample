@@ -26,6 +26,13 @@ int main( int argc, char * argv[] )
   std::cout << "inputVolume2 = " << inputVolume2.c_str() << std::endl;
   std::cout << "outputVolume = " << outputVolume.c_str() << std::endl;
 
+  // check if the input volumes were passed via shared memory pointer
+  if (inputVolume1.find(std::string("slicer:")) != std::string::npos ||
+      inputVolume2.find(std::string("slicer:")) != std::string::npos)
+    {
+    std::cerr << "Error:\n\tInput volume passed via shared memory pointer, unable to read with OpenCV imread.\n\tTurn on the Slicer option 'Prefer Executable CLIs' via the Edit, Application Settings, Modules panel.\n\tRestart Slicer and try again." << std::endl;
+    return EXIT_FAILURE;
+    }
   // read in the input images using the OpenCV image reader
   source1 = cv::imread(inputVolume1.c_str());
   if (!source1.data)
