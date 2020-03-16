@@ -22,7 +22,7 @@ set(ITK_NO_IO_FACTORY_REGISTER_MANAGER 1) # See Libs/ITKFactoryRegistration/CMak
 include(${ITK_USE_FILE})
 
 #-----------------------------------------------------------------------------
-find_package(OpenCV 3.1 REQUIRED)
+find_package(OpenCV 4.1 REQUIRED)
 
 message(STATUS "Blend: OpenCV dir = ${OpenCV_DIR}")
 get_filename_component(OpenCV_INCLUDE_DIR ${OpenCV_DIR}/../../include ABSOLUTE)
